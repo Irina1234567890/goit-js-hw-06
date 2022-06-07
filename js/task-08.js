@@ -3,7 +3,7 @@
 // Если пользователь заполнил все поля и отправил форму, собери значения полей в обьект, где имя поля будет именем свойства, а значение поля - значением свойства. Для доступа к элементам формы используй свойство elements.
 // Выведи обьект с введенными данными в консоль и очисти значения полей формы методом reset.
 
-const formEl = document.querySelector('login-form');
+const formEl = document.querySelector('.login-form');
 const mailEl = document.querySelector('email');
 const pasEl = document.querySelector('password');
 const btnEl = document.querySelector('submit');
