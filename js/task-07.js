@@ -1,8 +1,11 @@
 /*Напиши скрипт, который реагирует на изменение значения input#font-size-control (событие input) и изменяет инлайн-стиль span#text обновляя свойство font-size. В результате при перетаскивании ползунка будет меняться размер текста.
 */
-const input = document.getElementById("font-size-slider");
-const span = document.getElementById("text");
-input.addEventListener("input", handleInputRange);
-function handleInputRange(event) {
-  span.style.fontSize = event.currentTarget.value + "px";
-};
+const inputEl = document.querySelector('#name-input');
+const outputEl = document.querySelector('#name-output');
+
+inputEl.addEventListener('input', (event) => {
+  if(inputEl.textContent === " ") {
+      outputEl.textContent = 'Anonymous'
+  }
+     outputEl.textContent = event.currentTarget.value
+})
