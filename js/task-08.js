@@ -7,19 +7,33 @@ const formEl = document.querySelector('.login-form');
 const mailEl = document.querySelector('email');
 const pasEl = document.querySelector('password');
 const btnEl = document.querySelector('submit');
+// formEl.addEventListener('submit', handleSubmit);
+// console.log(formEl);
+// function handleSubmit(event) {
+//   event.preventDefault();
+//   const {
+//     elements: { login, password }
+//   } = event.currentTarget;
+//   if (login.value === "" || password.value === "") {
+//     alert('All fields must be filled!');
+//   }
+//   console.log(`Login: ${login.value}, Password: ${password.value}`);
+//   event.currentTarget.reset();
+// }
 
-formEl.addEventListener('submit', handleSubmit);
+let user = {
+  email: '',
+  password: '',
+},
 
-function handleSubmit(event) {
-  event.preventDefault();
-  const {
-    elements: { login, password }
-  } = event.currentTarget;
-
-  if (login.value === "" || password.value === "") {
-    alert('All fields must be filled!');
+submitForm.addEventListener('submit', () => {
+  if(emailField || passwordField === '') {
+    alert('All fields must be filled!!!');
+  } else {
+    user.email = emailField;
+    user.password = passwordField;
   }
-
-  console.log(`Login: ${login.value}, Password: ${password.value}`);
-  event.currentTarget.reset();
-}
+  document.querySelector('.login-form').requestFullscreen();
+    return user;
+    
+});
