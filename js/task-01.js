@@ -3,8 +3,10 @@ const categoryEl = document.querySelectorAll('.item');
 
 categoryEl.forEach(item => {
   const liTitle = document.querySelector('h2');
+  
   console.log(`Category: ${liTitle.textContent}`);
 
+  // const tagEl = document.querySelectorAll('.item');
   const tagEl = document.querySelectorAll('.item');
 console.log(`Elements: ${tagEl.length}`);
 

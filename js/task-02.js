@@ -7,7 +7,7 @@ const ingredients = [
   'Condiments',
 ];
 
-for (let ingredient of ingredients) {
+const ingredientRecept = ingredients.map(ingredient => {
   const ingredientEl = document.createElement('li');
   ingredientEl.textContent = `${ingredient}`;
   ingredientEl.classList.add('item');
@@ -15,8 +15,24 @@ for (let ingredient of ingredients) {
 const ingredientsList = document.querySelector('#ingredients');
 ingredientsList.append(ingredientEl);
 
-console.log(ingredientsList);
-};
+return {...ingredientsList};
+
+})
+console.log(ingredientRecept);
+
+// for (let ingredient of ingredients) {
+//   const ingredientEl = document.createElement('li');
+//   ingredientEl.textContent = `${ingredient}`;
+//   ingredientEl.classList.add('item');
+
+// const ingredientsList = document.querySelector('#ingredients');
+// ingredientsList.append(ingredientEl);
+
+// console.log(ingredientsList);
+// };
+
+
+
 // const ingredientsEl = document.querySelector('#ingredients');
 
 // for (let ingredient of ingredients) {
